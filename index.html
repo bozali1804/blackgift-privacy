@@ -34,13 +34,14 @@
 <!-- ════════════════════════ TÜRKÇE ════════════════════════ -->
 <span class="lang-tag">TÜRKÇE</span>
 <h1>DevIdle — Gizlilik Politikası</h1>
-<p class="meta">Geliştirici: <strong>BLACKGİFT</strong> · İletişim: <a href="mailto:blackgiftdeveloper@gmail.com">blackgiftdeveloper@gmail.com</a> · Yürürlük tarihi: 8 Temmuz 2026</p>
+<p class="meta">Geliştirici: <strong>BLACKGİFT</strong> · İletişim: <a href="mailto:blackgiftdeveloper@gmail.com">blackgiftdeveloper@gmail.com</a> · Yürürlük tarihi: 29 Temmuz 2026</p>
 
 <div class="box">
-<strong>Kısa özet:</strong> Kendi sunucumuz yok. Kişisel verinizi satmayız, kiralamayız,
-kendi sistemlerimizde saklamayız. Oyun kaydınız cihazınızda durur. Reklam, satın alma ve
-bulut kayıt gibi özellikler Google/Apple'ın kendi hizmetleri üzerinden çalışır ve bu
-hizmetler kendi gizlilik politikalarına tabidir.
+<strong>Kısa özet:</strong> Kişisel verinizi satmayız ve kiralamayız. Hesap açmanız
+gerekmez. Oyun kaydınız cihazınızda tutulur; bulut kaydı açıksa ilerlemeniz ayrıca
+<strong>anonim bir kimlikle</strong> Google Firebase üzerinde yedeklenir. Reklam ve
+satın alma özellikleri Google/Apple hizmetleri üzerinden çalışır ve bu hizmetler
+kendi gizlilik politikalarına tabidir.
 </div>
 
 <h2>1. Biz kimiz?</h2>
@@ -49,9 +50,37 @@ Gizlilikle ilgili her soru ve talep için bize <a href="mailto:blackgiftdevelope
 adresinden ulaşabilirsiniz.</p>
 
 <h2>2. Doğrudan topladığımız veriler</h2>
-<p><strong>Hiçbiri.</strong> DevIdle hesap açmanızı istemez, ad/e-posta/telefon gibi
-kimlik bilgisi sormaz ve oyun verinizi kendi sunucusuna göndermez. Oyun ilerlemeniz
-(kayıt dosyası) yalnızca cihazınızda saklanır.</p>
+<p>DevIdle <strong>hesap açmanızı istemez</strong>; e-posta, telefon numarası veya
+sosyal medya hesabı bağlamanız gerekmez. Oyun kaydınız öncelikle cihazınızda tutulur.</p>
+
+<p>Bunun yanında, ilerlemenizi cihazlar arasında taşıyabilmeniz ve cihazınızı
+kaybettiğinizde kaybolmaması için <strong>bulut kayıt</strong> özelliğini sunuyoruz.
+Bu özellik <strong>Google Firebase</strong> (Authentication ve Cloud Firestore)
+altyapısıyla çalışır ve geliştirici olarak <strong>bizim yönettiğimiz</strong> bir
+hizmettir. Bulut kaydı kullanıldığında şunlar saklanır:</p>
+
+<ul>
+<li><strong>Anonim kimlik:</strong> Firebase tarafından üretilen anonim kullanıcı
+kimliği (UID) ve oyun içi kimlik kodlarınız. Bu kimlik e-posta, telefon veya sosyal
+medya hesabınızla <em>ilişkili değildir</em>.</li>
+<li><strong>Oyuncu adı:</strong> Oyun içinde kendiniz bir ad girerseniz kaydınızla
+birlikte saklanır. <strong>Gerçek adınızı girmek zorunda değilsiniz</strong>; takma
+ad kullanmanızı öneririz.</li>
+<li><strong>Cihaz bilgileri:</strong> cihaz modeli, işletim sistemi, uygulama sürümü
+ve kuruluma özgü teknik bir kod. Bunlar farklı cihazlardaki kayıtları ayırt etmek ve
+senkronizasyon çakışmalarını çözmek için kullanılır.</li>
+<li><strong>Oyun ilerlemesi:</strong> aşama, oyun içi para/bilgi/elmas miktarları,
+toplam dokunma sayısı gibi ilerleme verileri ve kaydın zaman damgası.</li>
+</ul>
+
+<p>Bu verileri <strong>satmayız</strong>, reklam hedeflemesinde kullanmayız ve sizi
+kişisel olarak tanımlamak için işlemeyiz. Konum, rehber, fotoğraf, mikrofon veya
+kamera verisi toplamayız.</p>
+
+<p>Veriler Google Cloud altyapısında, Google'ın işlettiği sunucularda saklanır ve
+<strong>Türkiye dışına aktarılabilir</strong>. Ayrıntı için
+<a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase
+Gizlilik ve Güvenlik</a> sayfasına bakabilirsiniz.</p>
 
 <h2>3. Üçüncü taraf hizmetler</h2>
 <p>Oyunun bazı özellikleri aşağıdaki hizmetleri kullanır. Bu hizmetler kendi
@@ -60,7 +89,7 @@ politikaları kapsamında sınırlı veri işleyebilir:</p>
 <tr><th>Hizmet</th><th>Ne için</th><th>İşlenebilecek veri</th></tr>
 <tr><td>Google AdMob</td><td>İsteğe bağlı ödüllü reklamlar</td><td>Reklam kimliği (AAID/IDFA), reklam etkileşimi, yaklaşık konum (IP)</td></tr>
 <tr><td>Google Play / App Store</td><td>Uygulama içi satın almalar</td><td>Satın alma geçmişi (mağaza tarafından işlenir; biz saklamayız)</td></tr>
-<tr><td>Google Play Games / Apple Game Center</td><td>Bulut kayıt yedekleme</td><td>Hesap kimliği ve oyun kayıt verisi</td></tr>
+<tr><td>Google Firebase (Authentication + Firestore)</td><td>Bulut kayıt yedekleme ve cihazlar arası aktarım</td><td>Anonim kullanıcı kimliği, oyuncu adı (girerseniz), cihaz modeli/sürüm bilgisi, oyun ilerleme verisi</td></tr>
 </table>
 <p>İlgili politikalar: <a href="https://policies.google.com/privacy">Google Gizlilik Politikası</a> ·
 <a href="https://support.google.com/admob/answer/6128543">AdMob</a> ·
@@ -87,8 +116,10 @@ gerekli adımları atalım.</p>
 <ul>
 <li><strong>Yerel oyun kaydı:</strong> cihazınızdadır; oyun içi "sıfırlama" ile veya
 uygulamayı kaldırarak silebilirsiniz.</li>
-<li><strong>Bulut kaydı:</strong> Google Play Games / Game Center hesap ayarlarınızdan
-yönetilir ve silinebilir.</li>
+<li><strong>Bulut kaydı:</strong> Uygulamayı kaldırmak bulut kaydını silmez. Silinmesini
+istiyorsanız <a href="mailto:blackgiftdeveloper@gmail.com">bize e-posta gönderin</a> ve
+oyun içi <strong>kimlik kodunuzu</strong> belirtin (Ayarlar ekranında görünür) — kaydınızı
+ancak bu kodla eşleştirebiliriz, çünkü kimliğiniz anonimdir.</li>
 <li><strong>Reklam kimliği:</strong> cihaz ayarlarınızdan sıfırlanabilir veya
 kişiselleştirme kapatılabilir.</li>
 <li>Her türlü silme talebi için: <a href="mailto:blackgiftdeveloper@gmail.com">blackgiftdeveloper@gmail.com</a></li>
@@ -108,13 +139,14 @@ e-posta adresimize yazmanız yeterlidir; en geç 30 gün içinde yanıtlarız.</
 <!-- ════════════════════════ ENGLISH ════════════════════════ -->
 <span class="lang-tag">ENGLISH</span>
 <h1>DevIdle — Privacy Policy</h1>
-<p class="meta">Developer: <strong>BLACKGIFT</strong> · Contact: <a href="mailto:blackgiftdeveloper@gmail.com">blackgiftdeveloper@gmail.com</a> · Effective date: July 8, 2026</p>
+<p class="meta">Developer: <strong>BLACKGIFT</strong> · Contact: <a href="mailto:blackgiftdeveloper@gmail.com">blackgiftdeveloper@gmail.com</a> · Effective date: July 29, 2026</p>
 
 <div class="box">
-<strong>Short version:</strong> We run no servers of our own. We do not sell, rent, or
-store your personal data on our systems. Your save file lives on your device. Features
-like ads, purchases, and cloud saves run through Google/Apple services, which are
-governed by their own privacy policies.
+<strong>Short version:</strong> We do not sell or rent your personal data. No account
+is required. Your save file lives on your device; if cloud save is enabled, your
+progress is also backed up under an <strong>anonymous identifier</strong> on Google
+Firebase. Ads and purchases run through Google/Apple services, which are governed by
+their own privacy policies.
 </div>
 
 <h2>1. Who we are</h2>
@@ -123,9 +155,37 @@ privacy question or request, contact us at
 <a href="mailto:blackgiftdeveloper@gmail.com">blackgiftdeveloper@gmail.com</a>.</p>
 
 <h2>2. Data we collect directly</h2>
-<p><strong>None.</strong> DevIdle requires no account, never asks for your name,
-email, or phone number, and does not upload your game data to any server of ours.
-Your progress (save file) is stored only on your device.</p>
+<p>DevIdle <strong>requires no account</strong>; you do not need to provide an email,
+phone number, or link any social account. Your save is stored primarily on your device.</p>
+
+<p>In addition, we offer a <strong>cloud save</strong> feature so you can carry your
+progress across devices and not lose it if your device is lost. This feature runs on
+<strong>Google Firebase</strong> (Authentication and Cloud Firestore) and is a service
+<strong>operated by us</strong> as the developer. When cloud save is used, the following
+are stored:</p>
+
+<ul>
+<li><strong>Anonymous identifier:</strong> an anonymous user ID (UID) generated by
+Firebase, plus your in-game identity codes. This identifier is <em>not linked</em> to
+your email, phone number, or any social account.</li>
+<li><strong>Player name:</strong> if you enter a name in the game, it is stored with
+your save. <strong>You are not required to use your real name</strong>; we recommend a
+nickname.</li>
+<li><strong>Device information:</strong> device model, operating system, app version,
+and an installation-specific technical code. These are used to tell saves from different
+devices apart and to resolve sync conflicts.</li>
+<li><strong>Game progress:</strong> stage, in-game currency/knowledge/gem amounts, total
+taps and similar progress values, plus the save timestamp.</li>
+</ul>
+
+<p>We do <strong>not sell</strong> this data, do not use it for ad targeting, and do not
+process it to identify you personally. We do not collect location, contacts, photos,
+microphone, or camera data.</p>
+
+<p>Data is stored on Google Cloud infrastructure operated by Google and
+<strong>may be transferred outside your country</strong>. See
+<a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase
+Privacy and Security</a> for details.</p>
 
 <h2>3. Third-party services</h2>
 <p>Some features rely on the services below, which may process limited data under
@@ -134,7 +194,7 @@ their own policies:</p>
 <tr><th>Service</th><th>Purpose</th><th>Data that may be processed</th></tr>
 <tr><td>Google AdMob</td><td>Optional rewarded ads</td><td>Advertising ID (AAID/IDFA), ad interactions, coarse location (IP)</td></tr>
 <tr><td>Google Play / App Store</td><td>In-app purchases</td><td>Purchase history (processed by the store; we do not store it)</td></tr>
-<tr><td>Google Play Games / Apple Game Center</td><td>Cloud save backup</td><td>Account identifier and game save data</td></tr>
+<tr><td>Google Firebase (Authentication + Firestore)</td><td>Cloud save backup and cross-device transfer</td><td>Anonymous user ID, player name (if you enter one), device model/version info, game progress data</td></tr>
 </table>
 <p>Related policies: <a href="https://policies.google.com/privacy">Google Privacy Policy</a> ·
 <a href="https://support.google.com/admob/answer/6128543">AdMob</a> ·
@@ -161,8 +221,10 @@ the game, contact us and we will take appropriate action.</p>
 <ul>
 <li><strong>Local save:</strong> stored on your device; delete it via the in-game
 reset or by uninstalling the app.</li>
-<li><strong>Cloud save:</strong> managed and deletable through your Google Play
-Games / Game Center account settings.</li>
+<li><strong>Cloud save:</strong> uninstalling the app does not delete your cloud save.
+To have it deleted, <a href="mailto:blackgiftdeveloper@gmail.com">email us</a> and include
+your in-game <strong>identity code</strong> (shown in the Settings screen) — since your
+identifier is anonymous, that code is the only way we can locate your save.</li>
 <li><strong>Advertising ID:</strong> can be reset or de-personalized in your device
 settings.</li>
 <li>For any deletion request: <a href="mailto:blackgiftdeveloper@gmail.com">blackgiftdeveloper@gmail.com</a></li>
