@@ -34,14 +34,15 @@
 <!-- ════════════════════════ TÜRKÇE ════════════════════════ -->
 <span class="lang-tag">TÜRKÇE</span>
 <h1>Codestige — Gizlilik Politikası</h1>
-<p class="meta">Geliştirici: <strong>BLACKGİFT</strong> · İletişim: <a href="mailto:blackgiftdeveloper@gmail.com">blackgiftdeveloper@gmail.com</a> · Yürürlük tarihi: 29 Temmuz 2026</p>
+<p class="meta">Geliştirici: <strong>BLACKGİFT</strong> · İletişim: <a href="mailto:blackgiftdeveloper@gmail.com">blackgiftdeveloper@gmail.com</a> · Yürürlük tarihi: 31 Temmuz 2026</p>
 
 <div class="box">
 <strong>Kısa özet:</strong> Kişisel verinizi satmayız ve kiralamayız. Hesap açmanız
 gerekmez. Oyun kaydınız cihazınızda tutulur; bulut kaydı açıksa ilerlemeniz ayrıca
-<strong>anonim bir kimlikle</strong> Google Firebase üzerinde yedeklenir. Reklam ve
-satın alma özellikleri Google/Apple hizmetleri üzerinden çalışır ve bu hizmetler
-kendi gizlilik politikalarına tabidir.
+<strong>anonim bir kimlikle</strong> Google Firebase üzerinde yedeklenir.
+<strong>Kullanım analizi varsayılan olarak kapalıdır</strong> ve yalnızca siz
+Ayarlar'dan açarsanız çalışır. Reklam ve satın alma özellikleri Google/Apple
+hizmetleri üzerinden çalışır ve bu hizmetler kendi gizlilik politikalarına tabidir.
 </div>
 
 <h2>1. Biz kimiz?</h2>
@@ -73,6 +74,25 @@ senkronizasyon çakışmalarını çözmek için kullanılır.</li>
 toplam dokunma sayısı gibi ilerleme verileri ve kaydın zaman damgası.</li>
 </ul>
 
+<p>Ayrıca oyunu geliştirebilmek için <strong>isteğe bağlı kullanım analizi</strong>
+sunuyoruz. Bu özellik <strong>varsayılan olarak kapalıdır</strong> ve yalnızca
+Ayarlar → Gizlilik → <em>Kullanım Analizi</em> anahtarını siz açarsanız çalışır;
+aynı yerden istediğiniz zaman kapatabilirsiniz. Açtığınızda
+<strong>Google Firebase Analytics</strong> üzerinden şunlar ölçülür:</p>
+
+<ul>
+<li>Hangi aşamaya ne kadar sürede ulaştığınız ve oyunu nerede bıraktığınız</li>
+<li>Eğitim bölümünü tamamlayıp tamamlamadığınız</li>
+<li>İlk patronla karşılaşmanız ve sarma (prestij) noktaları</li>
+<li>Ödüllü reklam teklifi gösterildi mi, izlendi mi</li>
+<li>Satın alma akışının hangi adımında olduğunuz (ürün kimliği ve sonuç)</li>
+</ul>
+
+<p><strong>Analize gönderilmeyenler:</strong> oyun içi para, bilgi veya elmas
+bakiyenizin ham değeri, kayıt dosyanızın içeriği, Firebase kimliğiniz, e-posta
+adresiniz ve serbestçe yazdığınız hiçbir metin. Analiz açıkken de kişisel olarak
+tanımlanmazsınız.</p>
+
 <p>Bu verileri <strong>satmayız</strong>, reklam hedeflemesinde kullanmayız ve sizi
 kişisel olarak tanımlamak için işlemeyiz. Konum, rehber, fotoğraf, mikrofon veya
 kamera verisi toplamayız.</p>
@@ -90,6 +110,7 @@ politikaları kapsamında sınırlı veri işleyebilir:</p>
 <tr><td>Google AdMob</td><td>İsteğe bağlı ödüllü reklamlar</td><td>Reklam kimliği (AAID/IDFA), reklam etkileşimi, yaklaşık konum (IP)</td></tr>
 <tr><td>Google Play / App Store</td><td>Uygulama içi satın almalar</td><td>Satın alma geçmişi (mağaza tarafından işlenir; biz saklamayız)</td></tr>
 <tr><td>Google Firebase (Authentication + Firestore)</td><td>Bulut kayıt yedekleme ve cihazlar arası aktarım</td><td>Anonim kullanıcı kimliği, oyuncu adı (girerseniz), cihaz modeli/sürüm bilgisi, oyun ilerleme verisi</td></tr>
+<tr><td>Google Firebase Analytics</td><td>Kullanım analizi — <strong>yalnız siz açarsanız</strong></td><td>Oyun ilerleme olayları, cihaz/uygulama sürümü, oturum bilgisi. Bakiye, kayıt içeriği veya kimlik bilgisi gönderilmez</td></tr>
 </table>
 <p>İlgili politikalar: <a href="https://policies.google.com/privacy">Google Gizlilik Politikası</a> ·
 <a href="https://support.google.com/admob/answer/6128543">AdMob</a> ·
@@ -97,10 +118,26 @@ politikaları kapsamında sınırlı veri işleyebilir:</p>
 
 <h2>4. Reklamlar ve onayınız</h2>
 <p>Codestige'deki tüm reklamlar <strong>isteğe bağlıdır</strong> (ödül karşılığı izlemeyi
-siz seçersiniz); zorunlu/araya giren reklam yoktur. Avrupa Ekonomik Alanı ve Birleşik
-Krallık'ta kişiselleştirilmiş reklam için açık onayınız istenir; onay vermezseniz
-kişiselleştirilmemiş reklam gösterilir. iOS'ta uygulamalar arası takip yalnızca
-App Tracking Transparency izni verirseniz yapılır.</p>
+siz seçersiniz); zorunlu veya araya giren reklam yoktur.</p>
+
+<p>Avrupa Ekonomik Alanı, Birleşik Krallık ve İsviçre'de reklamlar başlamadan önce
+Google'ın onay ekranı gösterilir. Üç seçeneğiniz olur: <strong>kabul etmek</strong>,
+<strong>reddetmek</strong> veya seçenekleri tek tek yönetmek. Seçiminize göre:</p>
+
+<ul>
+<li><strong>Kabul ederseniz:</strong> ilgi alanlarınıza göre kişiselleştirilmiş reklam.</li>
+<li><strong>Kişiselleştirmeyi reddedip cihaz depolamasına izin verirseniz:</strong>
+kişiselleştirilmemiş, yalnızca içeriğe dayalı reklam.</li>
+<li><strong>Tümünü reddederseniz:</strong> yalnızca sınırlı reklam denenir. Uygun
+reklam bulunamazsa hiç reklam gösterilmez; oyun her hâlükârda çalışmaya devam eder.</li>
+</ul>
+
+<p>Reklam onayınızı <strong>istediğiniz zaman geri alabilir veya değiştirebilirsiniz</strong>:
+Ayarlar → Gizlilik → <em>Reklam Tercihleri</em>. Bu satır yalnızca onayın gerekli olduğu
+bölgelerde görünür.</p>
+
+<p>iOS'ta uygulamalar arası takip yalnızca App Tracking Transparency izni verirseniz
+yapılır; vermezseniz oyun aynı şekilde çalışır, yalnızca reklamlar genel olur.</p>
 
 <h2>5. Uygulama içi satın almalar</h2>
 <p>Satın almalar tamamen Google Play / App Store altyapısıyla gerçekleşir. Ödeme
@@ -139,14 +176,15 @@ e-posta adresimize yazmanız yeterlidir; en geç 30 gün içinde yanıtlarız.</
 <!-- ════════════════════════ ENGLISH ════════════════════════ -->
 <span class="lang-tag">ENGLISH</span>
 <h1>Codestige — Privacy Policy</h1>
-<p class="meta">Developer: <strong>BLACKGIFT</strong> · Contact: <a href="mailto:blackgiftdeveloper@gmail.com">blackgiftdeveloper@gmail.com</a> · Effective date: July 29, 2026</p>
+<p class="meta">Developer: <strong>BLACKGIFT</strong> · Contact: <a href="mailto:blackgiftdeveloper@gmail.com">blackgiftdeveloper@gmail.com</a> · Effective date: July 31, 2026</p>
 
 <div class="box">
 <strong>Short version:</strong> We do not sell or rent your personal data. No account
 is required. Your save file lives on your device; if cloud save is enabled, your
 progress is also backed up under an <strong>anonymous identifier</strong> on Google
-Firebase. Ads and purchases run through Google/Apple services, which are governed by
-their own privacy policies.
+Firebase. <strong>Usage analytics is off by default</strong> and only runs if you turn
+it on in Settings. Ads and purchases run through Google/Apple services, which are
+governed by their own privacy policies.
 </div>
 
 <h2>1. Who we are</h2>
@@ -178,6 +216,25 @@ devices apart and to resolve sync conflicts.</li>
 taps and similar progress values, plus the save timestamp.</li>
 </ul>
 
+<p>We also offer <strong>optional usage analytics</strong> so we can improve the game.
+This feature is <strong>off by default</strong> and only runs if you turn it on yourself
+under Settings → Privacy → <em>Usage Analytics</em>; you can turn it off again at any
+time from the same place. When enabled, the following is measured via
+<strong>Google Firebase Analytics</strong>:</p>
+
+<ul>
+<li>Which stage you reached, how long it took, and where you stopped playing</li>
+<li>Whether you completed the tutorial</li>
+<li>Your first boss encounter and rewind (prestige) points</li>
+<li>Whether a rewarded ad was offered and whether you watched it</li>
+<li>Which step of a purchase flow you reached (product ID and outcome)</li>
+</ul>
+
+<p><strong>Never sent to analytics:</strong> the raw amounts of your in-game currency,
+knowledge or gems, the contents of your save file, your Firebase identifier, your email
+address, or any free text you type. You are not personally identified even when
+analytics is enabled.</p>
+
 <p>We do <strong>not sell</strong> this data, do not use it for ad targeting, and do not
 process it to identify you personally. We do not collect location, contacts, photos,
 microphone, or camera data.</p>
@@ -195,6 +252,7 @@ their own policies:</p>
 <tr><td>Google AdMob</td><td>Optional rewarded ads</td><td>Advertising ID (AAID/IDFA), ad interactions, coarse location (IP)</td></tr>
 <tr><td>Google Play / App Store</td><td>In-app purchases</td><td>Purchase history (processed by the store; we do not store it)</td></tr>
 <tr><td>Google Firebase (Authentication + Firestore)</td><td>Cloud save backup and cross-device transfer</td><td>Anonymous user ID, player name (if you enter one), device model/version info, game progress data</td></tr>
+<tr><td>Google Firebase Analytics</td><td>Usage analytics — <strong>only if you enable it</strong></td><td>Game progress events, device/app version, session info. Balances, save contents and identifiers are not sent</td></tr>
 </table>
 <p>Related policies: <a href="https://policies.google.com/privacy">Google Privacy Policy</a> ·
 <a href="https://support.google.com/admob/answer/6128543">AdMob</a> ·
@@ -202,10 +260,27 @@ their own policies:</p>
 
 <h2>4. Ads and your consent</h2>
 <p>All ads in Codestige are <strong>opt-in</strong> (you choose to watch them for
-rewards); there are no forced or interstitial ads. In the EEA and UK, we ask for
-your explicit consent before showing personalized ads; without consent, only
-non-personalized ads are shown. On iOS, cross-app tracking happens only if you
-grant App Tracking Transparency permission.</p>
+rewards); there are no forced or interstitial ads.</p>
+
+<p>In the EEA, the UK and Switzerland, Google's consent screen is shown before any ads
+start. You get three choices: <strong>consent</strong>, <strong>do not consent</strong>,
+or manage the options individually. Depending on your choice:</p>
+
+<ul>
+<li><strong>If you consent:</strong> ads personalised to your interests.</li>
+<li><strong>If you decline personalisation but allow device storage:</strong>
+non-personalised, purely contextual ads.</li>
+<li><strong>If you decline everything:</strong> only limited ads are attempted. If no
+suitable ad is available, no ad is shown; the game keeps working either way.</li>
+</ul>
+
+<p>You can <strong>withdraw or change your ad consent at any time</strong> under
+Settings → Privacy → <em>Ad Preferences</em>. This entry only appears in regions where
+consent is required.</p>
+
+<p>On iOS, cross-app tracking happens only if you grant App Tracking Transparency
+permission; if you decline, the game works exactly the same and you simply see
+generic ads.</p>
 
 <h2>5. In-app purchases</h2>
 <p>Purchases are handled entirely by Google Play / the App Store. We never see your
