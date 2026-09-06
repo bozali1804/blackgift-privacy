@@ -34,15 +34,17 @@
 <!-- ════════════════════════ TÜRKÇE ════════════════════════ -->
 <span class="lang-tag">TÜRKÇE</span>
 <h1>Codestige — Gizlilik Politikası</h1>
-<p class="meta">Geliştirici: <strong>BLACKGİFT</strong> · İletişim: <a href="mailto:blackgiftdeveloper@gmail.com">blackgiftdeveloper@gmail.com</a> · Yürürlük tarihi: 6 Ağustos 2026</p>
+<p class="meta">Geliştirici: <strong>BLACKGİFT</strong> · İletişim: <a href="mailto:blackgiftdeveloper@gmail.com">blackgiftdeveloper@gmail.com</a> · Yürürlük tarihi: 6 Eylül 2026</p>
 
 <div class="box">
 <strong>Kısa özet:</strong> Kişisel verinizi satmayız ve kiralamayız. Hesap açmanız
 gerekmez. Oyun kaydınız cihazınızda tutulur; bulut kaydı açıksa ilerlemeniz ayrıca
 <strong>anonim bir kimlikle</strong> Google Firebase üzerinde yedeklenir.
-<strong>Kullanım analizi varsayılan olarak kapalıdır</strong> ve yalnızca siz
-Ayarlar'dan açarsanız çalışır. Reklam ve satın alma özellikleri Google/Apple
-hizmetleri üzerinden çalışır ve bu hizmetler kendi gizlilik politikalarına tabidir.
+<strong>Kullanım analizi ve çökme raporları varsayılan olarak kapalıdır</strong> ve
+yalnızca siz Ayarlar'dan açarsanız çalışır. Tek istisna, oyunun açılışta özellik
+anahtarlarını okuduğu istektir; oyun verisi içermez. Reklam ve satın alma özellikleri
+Google/Apple hizmetleri üzerinden çalışır ve bu hizmetler kendi gizlilik
+politikalarına tabidir.
 </div>
 
 <h2>1. Biz kimiz?</h2>
@@ -97,6 +99,33 @@ tanımlanmazsınız.</p>
 kişisel olarak tanımlamak için işlemeyiz. Konum, rehber, fotoğraf, mikrofon veya
 kamera verisi toplamayız.</p>
 
+<p><strong>Çökme raporları:</strong> Kullanım analizi anahtarını açtığınızda,
+<strong>Google Firebase Crashlytics</strong> üzerinden çökme ve ciddi hata raporları
+da toplanır. Bu raporlar hatanın oluştuğu kod satırlarını (yığın izi), cihaz modelini,
+işletim sistemi ve uygulama sürümünü, cihazın o anki bellek/depolama durumunu ve
+Firebase tarafından üretilen bir kurulum kimliğini içerir. Amacı yalnızca oyunu
+çökerten hataları bulup düzeltmektir. <strong>Kullanım analizi kapalıyken çökme
+raporu da gönderilmez</strong> — ikisi aynı anahtara bağlıdır.</p>
+
+<p><strong>Uzaktan yapılandırma:</strong> Oyun açılışta <strong>Google Firebase
+Remote Config</strong> hizmetine bağlanarak birkaç özellik anahtarını okur (örneğin
+bir etkinliğin açık olup olmadığı, hangi başlangıç rehberinin gösterileceği). Bu
+istek <strong>kullanım analizi kapalı olsa da yapılır</strong>, çünkü hatalı bir
+özelliği yeni sürüm beklemeden kapatabilmemiz için gereklidir. İstek sırasında
+Google'a yalnızca teknik bağlantı bilgileri (IP adresi, uygulama ve cihaz sürümü,
+Firebase kurulum kimliği) ulaşır; oyun ilerlemeniz, oyuncu adınız veya kayıt
+dosyanız <strong>gönderilmez</strong> ve bu istek analiz olarak kaydedilmez. Gelen
+değerler yalnızca bu sürümde zaten var olan özellikleri açıp kapatabilir.</p>
+
+<p><strong>Cihaz yedeklemesi (Android):</strong> Android'in kendi
+<em>Otomatik Yedekleme</em> özelliği açıksa, oyun kaydınız ve bulut kimlik
+dosyanız <strong>sizin kendi Google Drive hesabınıza</strong> yedeklenir; böylece
+telefon değiştirdiğinizde ilerlemeniz geri gelir. Bu yedek <strong>bize açık
+değildir</strong> — içeriğine erişemeyiz, Drive kotanızdan da düşmez. Yedeklemenin
+kapsamı bilerek daraltılmıştır: yalnızca kayıt dosyanız ve anonim bulut kimliğiniz
+yedeklenir. İstemiyorsanız Android ayarlarından Google Yedekleme'yi
+kapatabilirsiniz.</p>
+
 <p>Veriler Google Cloud altyapısında, Google'ın işlettiği sunucularda saklanır ve
 <strong>Türkiye dışına aktarılabilir</strong>. Ayrıntı için
 <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase
@@ -111,6 +140,9 @@ politikaları kapsamında sınırlı veri işleyebilir:</p>
 <tr><td>Google Play / App Store</td><td>Uygulama içi satın almalar</td><td>Satın alma geçmişi (mağaza tarafından işlenir; biz saklamayız)</td></tr>
 <tr><td>Google Firebase (Authentication + Firestore)</td><td>Bulut kayıt yedekleme ve cihazlar arası aktarım</td><td>Anonim kullanıcı kimliği, oyuncu adı (girerseniz), cihaz modeli/sürüm bilgisi, oyun ilerleme verisi</td></tr>
 <tr><td>Google Firebase Analytics</td><td>Kullanım analizi — <strong>yalnız siz açarsanız</strong></td><td>Oyun ilerleme olayları, cihaz/uygulama sürümü, oturum bilgisi. Bakiye, kayıt içeriği veya kimlik bilgisi gönderilmez</td></tr>
+<tr><td>Google Firebase Crashlytics</td><td>Çökme ve hata raporları — <strong>yalnız siz açarsanız</strong> (analiz anahtarına bağlı)</td><td>Yığın izi, cihaz modeli, işletim sistemi/uygulama sürümü, bellek-depolama durumu, Firebase kurulum kimliği</td></tr>
+<tr><td>Google Firebase Remote Config</td><td>Özellik anahtarları — <strong>analiz kapalıyken de çalışır</strong></td><td>IP adresi, uygulama/cihaz sürümü, Firebase kurulum kimliği. Oyun verisi gönderilmez</td></tr>
+<tr><td>Android Otomatik Yedekleme (Google Drive)</td><td>Kayıt yedeği — cihaz ayarınıza bağlı</td><td>Oyun kayıt dosyanız ve anonim bulut kimliğiniz. <strong>Sizin Drive hesabınızda tutulur; bizim erişimimiz yoktur</strong></td></tr>
 </table>
 <p>İlgili politikalar: <a href="https://policies.google.com/privacy">Google Gizlilik Politikası</a> ·
 <a href="https://support.google.com/admob/answer/6128543">AdMob</a> ·
@@ -171,12 +203,21 @@ sonuçlandırırız.</p>
 <li>App Store / Google Play satın alma geçmişiniz (mağazada kalır),</li>
 <li>daha önce gönderilmiş anonim kullanım istatistikleri,</li>
 <li>bildirim izni gibi işletim sistemi ayarları,</li>
-<li>oyun dışına paylaştığınız kayıt dosyaları.</li>
+<li>oyun dışına paylaştığınız kayıt dosyaları,</li>
+<li>Android Otomatik Yedekleme açıkken <strong>kendi Google Drive hesabınızda</strong>
+tutulan yedek. Bu yedeği biz silemeyiz; Google hesabınızın yedekleme ayarlarından
+kaldırabilirsiniz.</li>
 </ul>
 
 <p>Uygulamayı kaldırmak yalnızca cihazdaki yerel verileri kaldırır; bulut kaydını ve
 anonim hesabı silmez. Reklam kimliğinizi cihaz ayarlarından sıfırlayabilir veya reklam
 kişiselleştirmesini kapatabilirsiniz.</p>
+
+<p><strong>iOS'ta anahtar zinciri (Keychain):</strong> iPhone ve iPad'de anonim bulut
+kimliğiniz, uygulamayı silip yeniden kurduğunuzda kaydınıza geri dönebilmeniz için
+iOS Anahtar Zinciri'nde saklanır. Bu kayıt <strong>uygulamayı kaldırınca silinmez</strong>;
+uygulama içindeki <em>🧨 Hesabımı ve Verimi Sil</em> adımı ise onu da temizler. Tamamen
+sıfırdan başlamak istiyorsanız uygulamayı kaldırmadan <em>önce</em> bu adımı kullanın.</p>
 
 <h2>8. Haklarınız (KVKK / GDPR)</h2>
 <p>6698 sayılı KVKK ve GDPR kapsamında; verilerinize erişme, düzeltme, silme,
@@ -192,15 +233,16 @@ e-posta adresimize yazmanız yeterlidir; en geç 30 gün içinde yanıtlarız.</
 <!-- ════════════════════════ ENGLISH ════════════════════════ -->
 <span class="lang-tag">ENGLISH</span>
 <h1>Codestige — Privacy Policy</h1>
-<p class="meta">Developer: <strong>BLACKGIFT</strong> · Contact: <a href="mailto:blackgiftdeveloper@gmail.com">blackgiftdeveloper@gmail.com</a> · Effective date: August 6, 2026</p>
+<p class="meta">Developer: <strong>BLACKGIFT</strong> · Contact: <a href="mailto:blackgiftdeveloper@gmail.com">blackgiftdeveloper@gmail.com</a> · Effective date: September 6, 2026</p>
 
 <div class="box">
 <strong>Short version:</strong> We do not sell or rent your personal data. No account
 is required. Your save file lives on your device; if cloud save is enabled, your
 progress is also backed up under an <strong>anonymous identifier</strong> on Google
-Firebase. <strong>Usage analytics is off by default</strong> and only runs if you turn
-it on in Settings. Ads and purchases run through Google/Apple services, which are
-governed by their own privacy policies.
+Firebase. <strong>Usage analytics and crash reporting are off by default</strong> and
+only run if you turn them on in Settings. The one exception is a launch request that
+reads feature switches; it carries no game data. Ads and purchases run through
+Google/Apple services, which are governed by their own privacy policies.
 </div>
 
 <h2>1. Who we are</h2>
@@ -255,6 +297,32 @@ analytics is enabled.</p>
 process it to identify you personally. We do not collect location, contacts, photos,
 microphone, or camera data.</p>
 
+<p><strong>Crash reports:</strong> When you turn the usage analytics switch on, crash
+and fatal-error reports are also collected via <strong>Google Firebase
+Crashlytics</strong>. These reports contain the code path where the error occurred
+(stack trace), device model, operating system and app version, the device's memory
+and storage state at that moment, and a Firebase-generated installation identifier.
+They are used solely to find and fix crashes. <strong>When usage analytics is off, no
+crash reports are sent either</strong> — both are controlled by the same switch.</p>
+
+<p><strong>Remote configuration:</strong> At launch the game contacts
+<strong>Google Firebase Remote Config</strong> to read a few feature switches (for
+example whether an event is running, or which onboarding guide to show). This request
+is made <strong>even when usage analytics is off</strong>, because it is what lets us
+disable a faulty feature without waiting for a new release. Only technical connection
+details reach Google with it (IP address, app and device version, Firebase
+installation identifier); your game progress, player name and save file are
+<strong>not sent</strong>, and the request is not recorded as analytics. The values
+returned can only turn on or off features that already ship in this build.</p>
+
+<p><strong>Device backup (Android):</strong> If Android's own <em>Auto Backup</em>
+feature is enabled, your save file and cloud identity file are backed up to
+<strong>your own Google Drive account</strong>, so your progress returns when you
+switch phones. This backup is <strong>not accessible to us</strong> — we cannot read
+its contents, and it does not count against your Drive quota. Its scope is
+deliberately narrow: only your save file and anonymous cloud identity are included.
+You can turn Google Backup off in your Android settings if you prefer.</p>
+
 <p>Data is stored on Google Cloud infrastructure operated by Google and
 <strong>may be transferred outside your country</strong>. See
 <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase
@@ -269,6 +337,9 @@ their own policies:</p>
 <tr><td>Google Play / App Store</td><td>In-app purchases</td><td>Purchase history (processed by the store; we do not store it)</td></tr>
 <tr><td>Google Firebase (Authentication + Firestore)</td><td>Cloud save backup and cross-device transfer</td><td>Anonymous user ID, player name (if you enter one), device model/version info, game progress data</td></tr>
 <tr><td>Google Firebase Analytics</td><td>Usage analytics — <strong>only if you enable it</strong></td><td>Game progress events, device/app version, session info. Balances, save contents and identifiers are not sent</td></tr>
+<tr><td>Google Firebase Crashlytics</td><td>Crash and error reports — <strong>only if you enable it</strong> (same switch as analytics)</td><td>Stack trace, device model, OS/app version, memory and storage state, Firebase installation identifier</td></tr>
+<tr><td>Google Firebase Remote Config</td><td>Feature switches — <strong>runs even when analytics is off</strong></td><td>IP address, app/device version, Firebase installation identifier. No game data is sent</td></tr>
+<tr><td>Android Auto Backup (Google Drive)</td><td>Save backup — depends on your device setting</td><td>Your save file and anonymous cloud identity. <strong>Held in your own Drive account; we have no access to it</strong></td></tr>
 </table>
 <p>Related policies: <a href="https://policies.google.com/privacy">Google Privacy Policy</a> ·
 <a href="https://support.google.com/admob/answer/6128543">AdMob</a> ·
@@ -330,12 +401,21 @@ receiving it.</p>
 <li>Your App Store / Google Play purchase history (retained by the store),</li>
 <li>anonymous usage statistics submitted previously,</li>
 <li>operating-system settings such as notification permission,</li>
-<li>save files you shared outside the game.</li>
+<li>save files you shared outside the game,</li>
+<li>the backup held in <strong>your own Google Drive account</strong> when Android Auto
+Backup is enabled. We cannot delete that backup; you can remove it from your Google
+account's backup settings.</li>
 </ul>
 
 <p>Uninstalling the app removes only local data from the device; it does not delete
 the cloud save or anonymous account. You can reset your advertising ID or disable ad
 personalization in your device settings.</p>
+
+<p><strong>iOS Keychain:</strong> On iPhone and iPad, your anonymous cloud identity is
+stored in the iOS Keychain so you can return to your save after deleting and
+reinstalling the app. That entry is <strong>not removed by uninstalling</strong>; the
+in-app <em>🧨 Delete My Account and Data</em> step does clear it. If you want a
+completely fresh start, use that step <em>before</em> you uninstall.</p>
 
 <h2>8. Your rights (GDPR / Turkish KVKK)</h2>
 <p>Under the GDPR and Turkish Law No. 6698 (KVKK), you have the right to access,
